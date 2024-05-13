@@ -13,9 +13,10 @@ function LoginModal({ isOpen, onClose }) {
         alert(res.data.message)
         onClose();
       })
-    } catch (error) {
-      console.error('Login error:', error.response.data);
-      setError(error.response.data.error);
+    } catch (e) {
+      console.error('Login error:', e.response.data);
+      setError(e.response.data.error);
+      alert(error)
     }
   };
 
