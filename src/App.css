@@ -1,0 +1,162 @@
+.header, .main-banner, .events-section {
+  text-align: center;
+  padding: 10px;
+  
+}
+
+.header a {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.main-banner h1, .main-banner p {
+  color: #810000;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.event {
+  background: black;
+  color: white;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.event button {
+  background-color: #810000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: rgb(150, 0, 0);
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    margin-top: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.intro h1 {
+    color: rgb(0, 0, 0);
+}
+
+.intro p, .events p {
+    color: #ffffff;
+}
+
+button {
+    background-color: #810000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.events {
+    background-color: #222;
+    padding: 20px;
+}
+
+.events div {
+    margin-bottom: 20px;
+}
+.start_button{
+  justify-content: flex-end;
+  display: flex;
+  
+}
+.start_button button{
+  margin-right: 8%;
+}
+.event_position{
+  background-color: #000000;
+  padding:3%;
+  
+border-radius: 20px;
+  border: 1px solid #444; /* Subtle border for event boxes */
+  
+}
+
+
+
+
+
+/* login window style */
+
+/* убираем нижний ползунок прокрутки */
+body {
+  overflow-x: hidden;
+}
+
+/* фон нашего модального окна */
+.modalBackground {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  /* указываем z-индекс для корректного наслаивания */
+  z-index: 1;
+}
+
+/* позиционирование самого модального окна */
+.modalActive {
+  position: absolute;
+  width: 350px;
+  height: 495px;
+  top: calc(50% - 250px);
+  left: calc(50% - 175px);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+  padding: 40px 20px;
+}
+
+/* кнопочка закрытия модального окна */
+.modalClose {
+  font-family: var(--font-regular);
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* сама картинка кнопочки закрытия */
+.modalClose img {
+  margin: 3px;
+  width: 24px;
+  height: 24px;
+}
+
+/* делаем позиционирование внутренних элементов относительно модального окна */
+.modalWindow {
+  position: relative;
+}
