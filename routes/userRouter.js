@@ -48,7 +48,7 @@ userRouter.post("/login", async (req, res) => {
         user.token = token
         
         await user.save()
-        return res.status(200).json({message: "Successfully authorized", user: user, token: token})
+        return res.status(200).json({message: "Successfully authorized", user: user})
     } catch (error) {
         return res.status(500).json({error: error.message})        
     }
