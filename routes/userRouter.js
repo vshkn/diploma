@@ -17,11 +17,11 @@ userRouter.post("/register", async (req, res) => {
             email: email,
             password: await bcrypt.hash(password, 10)
         })
-        
+
         await user.save()
         return res.status(201).json({message: "Successfully registered", user: user})
     } catch (error) {
-        return res.status(500).json({error: error.message})        
+        return res.status(500).json({error: error.message})
     }
 })
 
@@ -46,12 +46,17 @@ userRouter.post("/login", async (req, res) => {
         }, secret_key)
 
         user.token = token
-        
+
         await user.save()
         return res.status(200).json({message: "Successfully authorized", user: user})
     } catch (error) {
-        return res.status(500).json({error: error.message})        
+        return res.status(500).json({error: error.message})
     }
+})
+
+userRouter.get("/users", async (req, res) => {
+    const users = await User.find({})
+    return res.status(200).json({users: users})
 })
 
 module.exports = userRouter
