@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 import './App.css';
-import Header from './modules/Header';
-import Banner from './modules/Banner';
-import Events from './modules/Events';
-import ModalWindow from './login_page/ModalWindow';
+import {SignIn} from './pages/Sign-in/signin';
+import {MainPage} from './pages/Main/main';
 
-const App = () => {
+function App() {
+    return (
+        <div className="App">
+            <Router>
+                <Routes>
+                    <Route path="/sign-in" element={<SignIn/>}/>
+                    <Route exact path="/" element={<MainPage/>}/>
 
 
-  return (
-    <div className="App">
-<Header></Header>
-<ModalWindow></ModalWindow>
-
-<Banner></Banner>
-<Events></Events>
-
-    </div>
-  );
-};
+                </Routes>
+            </Router>
+        </div>
+    );
+}
 
 export default App;
